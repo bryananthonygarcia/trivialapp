@@ -5,7 +5,158 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="TrivialApp.Views.MainPage"
              Title="MainPage">
-  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-    <Label Text="{Binding Title}" />
-  </StackLayout>
+  <Grid>
+    <Grid Grid.RowSpacing="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="200"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+      <Grid BackgroundColor="#202223">
+        <Label Text="Hello, Bryan!" FontSize="28" TextColor="White" Margin="14" VerticalOptions="Start" HorizontalOptions="Start"/>
+      </Grid>
+      <ScrollView Grid.Row="1">
+        <Grid BackgroundColor="#2f273e" Padding="4">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="180"/>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>
+
+          <Button BackgroundColor="#374352" TextColor="Transparent" BorderColor="Transparent"/>
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Label Text="books" FontSize="28" TextColor="#0d132c" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Grid BackgroundColor="#0d132c" Margin="20,0,20,20" Grid.Row="1">
+              <Label Text="All about books and stuff" FontSize="14" TextColor="#738eb1" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            </Grid>
+          </Grid>
+          <Button x:Name="booksButton" BackgroundColor="Transparent" TextColor="Transparent" BorderColor="Transparent" Command="{Binding GoToDifficultyCommand}" CommandParameter="10"/>
+
+          <Button Grid.Column="1" BackgroundColor="#1aa7cb" TextColor="Transparent" BorderColor="Transparent"/>
+          <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Label Text="films" FontSize="28" TextColor="#117897" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Grid BackgroundColor="#117897" Margin="20,0,20,20" Grid.Row="1">
+              <Label Text="All about movies and stuff" FontSize="14" TextColor="#3ab5da" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            </Grid>
+          </Grid>
+          <Button Grid.Column="1" BackgroundColor="Transparent" TextColor="Transparent" BorderColor="Transparent" Command="{Binding GoToDifficultyCommand}" CommandParameter="11"/>
+
+          <Button Grid.Row="1" BackgroundColor="#f23c50" TextColor="Transparent" BorderColor="Transparent"/>
+          <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Label Text="music" FontSize="28" TextColor="#ba2031" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Grid BackgroundColor="#ba2031" Margin="20,0,20,20" Grid.Row="1">
+              <Label Text="All about music and stuff" FontSize="14" TextColor="#eb6472" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            </Grid>
+          </Grid>
+          <Button Grid.Column="1" BackgroundColor="Transparent" TextColor="Transparent" BorderColor="Transparent" Command="{Binding GoToDifficultyCommand}" CommandParameter="12"/>
+
+          <Button Grid.Row="1" Grid.Column="1" BackgroundColor="#80b534" TextColor="Transparent" BorderColor="Transparent"/>
+          <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Label Text="video games" FontSize="28" TextColor="#446713" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Grid BackgroundColor="#446713" Margin="20,0,20,20" Grid.Row="1">
+              <Label Text="All about video games and stuff" FontSize="14" TextColor="#85b93c" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            </Grid>
+          </Grid>
+          <Button Grid.Row="1" Grid.Column="1" BackgroundColor="Transparent" TextColor="Transparent" BorderColor="Transparent" Command="{Binding GoToDifficultyCommand}" CommandParameter="15"/>
+
+          <Button Grid.Row="2" Grid.Column="0" BackgroundColor="#ea452b" TextColor="Transparent" BorderColor="Transparent"/>
+          <Grid Grid.Row="2" Grid.Column="0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Label Text="sports"  FontSize="28" TextColor="#a32e1c" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Grid BackgroundColor="#a32e1c" Margin="20,0,20,20" Grid.Row="1">
+              <Label Text="All about sports and stuff" FontSize="14" TextColor="#ea452b" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            </Grid>
+          </Grid>
+          <Button Grid.Row="2" Grid.Column="0" BackgroundColor="Transparent" TextColor="Transparent" BorderColor="Transparent" Command="{Binding GoToDifficultyCommand}" CommandParameter="21"/>
+
+          <Button Grid.Row="2" Grid.Column="1" BackgroundColor="#3e596a" TextColor="Transparent" BorderColor="Transparent"/>
+          <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Label Text="science" FontSize="28" TextColor="#172731" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Grid BackgroundColor="#172731" Margin="20,0,20,20" Grid.Row="1">
+              <Label Text="All about science and stuff" FontSize="14" TextColor="#3e596a" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            </Grid>
+          </Grid>
+          <Button Grid.Row="2" Grid.Column="1" BackgroundColor="Transparent" TextColor="Transparent" BorderColor="Transparent" Command="{Binding GoToDifficultyCommand}" CommandParameter="17"/>
+
+          <Button Grid.Row="3" Grid.Column="0" BackgroundColor="#414141" TextColor="Transparent" BorderColor="Transparent"/>
+          <Grid Grid.Row="3" Grid.Column="0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Label Text="animals" FontSize="28" TextColor="#1f1d1d" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Grid BackgroundColor="#1f1d1d" Grid.Row="1"  Margin="20,0,20,20">
+              <Label Text="All about animals and stuff" FontSize="14" TextColor="#414141" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            </Grid>
+          </Grid>
+          <Button Grid.Row="3" Grid.Column="0" BackgroundColor="Transparent" TextColor="Transparent" BorderColor="Transparent" Command="{Binding GoToDifficultyCommand}" CommandParameter="27"/>
+
+          <Button Grid.Row="3" Grid.Column="1" BackgroundColor="#fd297d" TextColor="Transparent" BorderColor="Transparent"/>
+          <Grid Grid.Row="3" Grid.Column="1">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Label Text="celebrities" FontSize="28" TextColor="#9b1047" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Grid BackgroundColor="#9b1047" Grid.Row="1"  Margin="20,0,20,20">
+              <Label Text="All about celebrities and stuff" FontSize="14" TextColor="#fd297d" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            </Grid>
+          </Grid>
+          <Button Grid.Row="3" Grid.Column="1" BackgroundColor="Transparent" TextColor="Transparent" BorderColor="Transparent" Command="{Binding GoToDifficultyCommand}" CommandParameter="26"/>
+        </Grid>
+      </ScrollView>
+    </Grid>
+
+    <Grid BackgroundColor="#661d1d1d" IsVisible="{Binding IsDifficultyVisible}">
+      <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Label Text="choose difficulty" FontSize="24" TextColor="#ecedeb" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        <Grid Grid.ColumnSpacing="10">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+          </Grid.ColumnDefinitions>
+          <Grid HeightRequest="100" WidthRequest="100"  BackgroundColor="#61bdd9">
+            <Label Text="easy" FontAttributes="Bold" FontSize="18" TextColor="White" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Button BackgroundColor="Transparent" TextColor="Transparent" BorderColor="Transparent" Command="{Binding NavigateToQuestionsCommand}" CommandParameter="easy"/>
+          </Grid>
+          <Grid Grid.Column="1" HeightRequest="100" WidthRequest="100" BackgroundColor="#288fae">
+            <Label Text="medium" FontAttributes="Bold" FontSize="18" TextColor="White" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Button BackgroundColor="Transparent" TextColor="Transparent" BorderColor="Transparent" Command="{Binding NavigateToQuestionsCommand}" CommandParameter="medium"/>
+          </Grid>
+          <Grid Grid.Column="2" HeightRequest="100" WidthRequest="100" BackgroundColor="#0a7393">
+            <Label Text="hard" FontAttributes="Bold" FontSize="18" TextColor="White" Margin="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Button BackgroundColor="Transparent" TextColor="Transparent" BorderColor="Transparent" Command="{Binding NavigateToQuestionsCommand}" CommandParameter="hard"/>
+          </Grid>
+        </Grid>
+      </StackLayout>
+    </Grid>
+  </Grid>
 </ContentPage>

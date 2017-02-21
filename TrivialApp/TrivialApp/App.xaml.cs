@@ -1,5 +1,8 @@
 ﻿using Prism.Unity;
+using TrivialApp.Models;
+using TrivialApp.Models.Interface;
 using TrivialApp.Views;
+using Microsoft.Practices.Unity;
 
 namespace TrivialApp
 {
@@ -11,12 +14,14 @@ namespace TrivialApp
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("MainPage?title=Hello%20from%20Xamarin.Forms");
+            NavigationService.NavigateAsync("MainPage");
         }
 
         protected override void RegisterTypes()
         {
+            Container.RegisterType<ITriviaService, TriviaService>();
             Container.RegisterTypeForNavigation<MainPage>();
+            Container.RegisterTypeForNavigation<QuestionsPage>();
         }
     }
 }
